@@ -47,10 +47,7 @@ class TouClick{
 			$checkParam['timestamp'] = $params ['ran'];
 			$sign = $this->getSign($checkParam, $this->prikey);
 			if ($sign == $check['sign']) {
-				$res['code'] = 12;
-				$res['message'] = '验证成功';
-				$res['checkCode'] = $check['ckCode'];
-				return $res;
+				return 0;
 			} else {
 				$res['code'] = 12;
 				$res['message'] = '签名校验失败,数据可能被篡改';
